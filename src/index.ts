@@ -6,6 +6,7 @@ import clientRoute from './routes/clientsRoutes'
 import bankerRoute from './routes/bankerRoutes'
 import transcationRoute from "./routes/transactionClient"
 import bankerClientRoute from "./routes/bankerClientRoute"
+import fetchClient from "./routes/fetchClients"
 import express from "express"
 
 const app = express();
@@ -30,6 +31,7 @@ const main = async () => {
         app.use(bankerRoute)
         app.use(transcationRoute)
         app.use(bankerClientRoute)
+        app.use(fetchClient)
 
         app.listen(5000, () => console.log(`server is running on port ${5000}...`))
     } catch (error) {
